@@ -15,6 +15,7 @@ class _minPreviewState extends State<minPreview> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(10.0),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height * 0.2,
       color: widget.backgroundColor,

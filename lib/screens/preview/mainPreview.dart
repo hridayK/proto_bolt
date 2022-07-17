@@ -16,37 +16,40 @@ class mainPreview extends StatefulWidget {
 class _mainPreviewState extends State<mainPreview> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: widget.backgroundColor,
-      child: Column(
-        children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.03,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Icon(
-                    Icons.arrow_back_rounded,
-                    color: widget.backgroundColor != Colors.white
-                        ? Colors.white
-                        : Colors.black,
-                    size: 34,
+    return Material(
+      child: Container(
+        padding: const EdgeInsets.all(10.0),
+        color: widget.backgroundColor,
+        child: Column(
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.03,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(
+                      Icons.arrow_back_rounded,
+                      color: widget.backgroundColor != Colors.white
+                          ? Colors.white
+                          : Colors.black,
+                      size: 34,
+                    ),
                   ),
-                ),
-              )
-            ],
-          ),
-          Center(
-            child: widget.render,
-          ),
-        ],
+                )
+              ],
+            ),
+            Center(
+              child: widget.render,
+            ),
+          ],
+        ),
       ),
     );
   }
