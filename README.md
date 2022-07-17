@@ -2,15 +2,4 @@
 
 A sandbox to try out prototyping UI elements realtime on your phone
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![mlh01](https://user-images.githubusercontent.com/16136188/179391518-feb9c5a1-079f-48c5-8fd8-12b7f2e4bd18.gif)
