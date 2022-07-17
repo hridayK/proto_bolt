@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:proto_bolt/textView.dart';
 import 'themes.dart';
 
 void main() {
@@ -14,22 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "proto-bolt",
-      theme: ThemeData(
-        colorScheme: const ColorScheme(
-          brightness: Brightness.dark,
-          primary: Colors.amber,
-          onPrimary: Colors.white,
-          secondary: Colors.deepPurple,
-          onSecondary: Colors.white,
-          background: Colors.black,
-          onBackground: Colors.white,
-          surface: Colors.deepPurpleAccent,
-          onSurface: Colors.white,
-          error: Colors.amber,
-          onError: Colors.white,
-        ),
-      ),
+      title: "Proto-Bolt",
+      theme: darkThemeHome(),
       home: const HomeScreen(),
     );
   }
@@ -62,9 +48,17 @@ class _HomeScreenState extends State<HomeScreen> {
             child: const Text("Button", style: TextStyle(fontSize: 30)),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => textViewProto(),
+                  fullscreenDialog: true,
+                ),
+              );
+            },
             style: ElevatedButton.styleFrom(primary: Colors.blueAccent),
-            child: const Text("TextView", style: TextStyle(fontSize: 30)),
+            child: const Text("Label", style: TextStyle(fontSize: 30)),
           ),
           ElevatedButton(
             onPressed: () {},
